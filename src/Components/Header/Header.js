@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css'
 
-const Header = () => {
+const Header = (props) => {
     return (
         <div>
             <header>
@@ -14,7 +14,7 @@ const Header = () => {
                             <div className="manu-container text-success">
                                 <a className="text-success" href="/home">Home</a>
                                 <a className="text-success" href="/products">Products</a>
-                                <a className="text-success" href="/chart">Chart</a>
+                                <a className="text-success" href="/chart">Chart <sup>{props.count}</sup> </a>
                                 <a className="text-success" href="/contract">Contract</a>
                             </div>
                         </div>
