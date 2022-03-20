@@ -1,9 +1,9 @@
 import React from 'react';
+import Reactmodal from '../Reactmodal/Reactmodal';
 import './Singleproducts.css'
 
 const Singleproduct = (props) => {
     const {setCartCount} = props
-   console.log(props.product.title)
     return (
         <div className="col-md-3 p-4 mt-5 card">
             <div className="card-body">
@@ -14,8 +14,8 @@ const Singleproduct = (props) => {
                     <p>Product discription: {props.product.description.slice(1,30)}</p>
                     <div className="d-flex justify-content-around">
                         <button onClick={setCartCount} type="button" class="btn btn-primary me-2">AddTOcard</button>
-                        <button type="button" class="btn btn-danger">Delete</button>
-                        <button type="button" class="btn btn-success ms-2">Details</button>
+                        <Reactmodal product = {props.product}></Reactmodal>
+                        <button type="button" class="btn btn-danger ms-2">Delete</button>
                      </div>
                 </div>
             </div>
